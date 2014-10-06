@@ -1,7 +1,9 @@
-@(message: String)
+@(games: List[org.pickem.model.Game])
 
-@main("Welcome to Play") {
-
-    @play20.welcome(message, style = "Java")
-
-}
+<html>
+	<body>
+	@for(p <- games) {
+  		<p>@p.getHomeName</p>
+	} 
+	</body>
+</html>
